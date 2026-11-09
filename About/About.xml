@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Synstruct Progenitor Scenario</name>
+	<name>Synstruct Progenitor Mod</name>
     <author>MaverickMartyn</author>
 	<modIconPath IgnoreIfNoMatchingField="True">ArtificialSupremacy_x32</modIconPath>
     <supportedVersions>
@@ -32,7 +32,7 @@
 			<downloadUrl>https://github.com/RWDevathon/Synstructs-Core</downloadUrl>
 		</li>
 	</modDependencies>
-	<packageId>MaverickMartyn.ArtificialBeings.SynstructProgenitorScenario</packageId>
+	<packageId>MaverickMartyn.ArtificialBeings.SynstructProgenitorMod</packageId>
 	<loadAfter>
 		<li>erdelf.HumanoidAlienRaces</li>
 		<!-- Dependency -->
