@@ -58,12 +58,12 @@ namespace SynstructProgenitorMod
             {
                 if (item.IsSlave)
                 {
-                    if (hasArtificialPrecept && SynstructProgenitorScenarioMod.IsArtificial(item))
+                    if (hasArtificialPrecept && SynstructProgenitorMod.IsArtificial(item))
                     {
                         ignoredArtificialSlaves++;
                         continue;
                     }
-                    else if (hasBiologicalPrecept && SynstructProgenitorScenarioMod.IsBiological(item))
+                    else if (hasBiologicalPrecept && SynstructProgenitorMod.IsBiological(item))
                     {
                         ignoredBiologicalSlaves++;
                         continue;

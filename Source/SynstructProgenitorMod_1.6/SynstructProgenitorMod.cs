@@ -12,9 +12,9 @@ using Verse.AI.Group;
 
 namespace SynstructProgenitorMod
 {
-    public class SynstructProgenitorScenarioMod : Mod
+    public class SynstructProgenitorMod : Mod
     {
-        public SynstructProgenitorScenarioMod(ModContentPack content) : base(content)
+        public SynstructProgenitorMod(ModContentPack content) : base(content)
         {
             Log.Message("Synstruct Progenitor Initialized");
         }

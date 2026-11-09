@@ -147,11 +147,11 @@ namespace SynstructProgenitorMod
         {
             if (trad is Tradeable_Pawn && trad.AnyThing is Pawn)
             {
-                if (SynstructProgenitorScenarioMod.IsArtificial(trad.AnyThing as Pawn) && IdeoUtility.DoerWillingToDo(ArtificialBeingsDefOf.ABF_Artificial_SoldSlave, doer))
+                if (SynstructProgenitorMod.IsArtificial(trad.AnyThing as Pawn) && IdeoUtility.DoerWillingToDo(ArtificialBeingsDefOf.ABF_Artificial_SoldSlave, doer))
                 {
                     return true;
                 }
-                else if (SynstructProgenitorScenarioMod.IsBiological(trad.AnyThing as Pawn) && IdeoUtility.DoerWillingToDo(BiologicalBeingsDefOf.ABF_Biological_SoldSlave, doer))
+                else if (SynstructProgenitorMod.IsBiological(trad.AnyThing as Pawn) && IdeoUtility.DoerWillingToDo(BiologicalBeingsDefOf.ABF_Biological_SoldSlave, doer))
                 {
                     return true;
                 }
@@ -199,31 +199,31 @@ namespace SynstructProgenitorMod
         {
             if (ModsConfig.IdeologyActive)
             {
-                if (SynstructProgenitorScenarioMod.IsArtificial(slave))
+                if (SynstructProgenitorMod.IsArtificial(slave))
                     Find.HistoryEventsManager.RecordEvent(new HistoryEvent(ArtificialBeingsDefOf.ABF_Artificial_SoldSlave, pawn.Named(HistoryEventArgsNames.Doer), slave.Named(HistoryEventArgsNames.Victim)));
-                if (SynstructProgenitorScenarioMod.IsBiological(slave))
+                if (SynstructProgenitorMod.IsBiological(slave))
                     Find.HistoryEventsManager.RecordEvent(new HistoryEvent(BiologicalBeingsDefOf.ABF_Biological_SoldSlave, pawn.Named(HistoryEventArgsNames.Doer), slave.Named(HistoryEventArgsNames.Victim)));
             }
         }
 
         public static void WillingToShareBedPostfix(Pawn pawn1, Pawn pawn2, ref bool __result)
         {
-            if (SynstructProgenitorScenarioMod.IsAnyArtificial(pawn1, pawn2))
+            if (SynstructProgenitorMod.IsAnyArtificial(pawn1, pawn2))
                 if (!IdeoUtility.DoerWillingToDo(ArtificialBeingsDefOf.ABF_ArtificialDating_SharedBed, pawn1) || !IdeoUtility.DoerWillingToDo(ArtificialBeingsDefOf.ABF_ArtificialDating_SharedBed, pawn2))
                     __result = false;
 
-            if (SynstructProgenitorScenarioMod.IsAnyBiological(pawn1, pawn2))
+            if (SynstructProgenitorMod.IsAnyBiological(pawn1, pawn2))
                 if (!IdeoUtility.DoerWillingToDo(BiologicalBeingsDefOf.ABF_BiologicalDating_SharedBed, pawn1) || !IdeoUtility.DoerWillingToDo(BiologicalBeingsDefOf.ABF_BiologicalDating_SharedBed, pawn2))
                     __result = false;
         }
 
         public static void RomanceAttemptSuccessChancePostfix(Pawn initiator, Pawn recipient, ref float __result)
         {
-            if (SynstructProgenitorScenarioMod.IsAnyArtificial(initiator, recipient))
+            if (SynstructProgenitorMod.IsAnyArtificial(initiator, recipient))
                 if (!IdeoUtility.DoerWillingToDo(ArtificialBeingsDefOf.ABF_ArtificialDating_BeginRomance, initiator) || !IdeoUtility.DoerWillingToDo(ArtificialBeingsDefOf.ABF_ArtificialDating_BeginRomance, recipient))
                     __result = -1f;
 
-            if (SynstructProgenitorScenarioMod.IsAnyBiological(initiator, recipient))
+            if (SynstructProgenitorMod.IsAnyBiological(initiator, recipient))
                 if (!IdeoUtility.DoerWillingToDo(BiologicalBeingsDefOf.ABF_BiologicalDating_BeginRomance, initiator) || !IdeoUtility.DoerWillingToDo(BiologicalBeingsDefOf.ABF_BiologicalDating_BeginRomance, recipient))
                     __result = -1f;
         }
@@ -249,12 +249,12 @@ namespace SynstructProgenitorMod
         {
             if (ModsConfig.IdeologyActive)
             {
-                if (SynstructProgenitorScenarioMod.IsAnyArtificial(initiator, recipient))
+                if (SynstructProgenitorMod.IsAnyArtificial(initiator, recipient))
                 {
                     Find.HistoryEventsManager.RecordEvent(new HistoryEvent(ArtificialBeingsDefOf.ABF_ArtificialDating_Dating, initiator.Named(HistoryEventArgsNames.Doer), recipient.Named(HistoryEventArgsNames.Victim)));
                     Find.HistoryEventsManager.RecordEvent(new HistoryEvent(ArtificialBeingsDefOf.ABF_ArtificialDating_Dating, recipient.Named(HistoryEventArgsNames.Doer), initiator.Named(HistoryEventArgsNames.Victim)));
                 }
-                if (SynstructProgenitorScenarioMod.IsAnyBiological(initiator, recipient))
+                if (SynstructProgenitorMod.IsAnyBiological(initiator, recipient))
                 {
                     Find.HistoryEventsManager.RecordEvent(new HistoryEvent(BiologicalBeingsDefOf.ABF_BiologicalDating_Dating, initiator.Named(HistoryEventArgsNames.Doer), recipient.Named(HistoryEventArgsNames.Victim)));
                     Find.HistoryEventsManager.RecordEvent(new HistoryEvent(BiologicalBeingsDefOf.ABF_BiologicalDating_Dating, recipient.Named(HistoryEventArgsNames.Doer), initiator.Named(HistoryEventArgsNames.Victim)));

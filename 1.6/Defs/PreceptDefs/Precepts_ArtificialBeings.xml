@@ -37,7 +37,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_ArtificialBeings_Abhorrent</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialBeings</workerClass>
 		<thoughtClass>Thought_Situational</thoughtClass>
 		<stages>
 			<li>
@@ -51,7 +51,7 @@
 	<ThoughtDef>
 		<defName>ABF_ArtificialBeings_Abhorrent_Social</defName>
 		<thoughtClass>Thought_SituationalSocial</thoughtClass>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
 		<stages>
 			<li>
 				<label>disgusting clanker!</label>
@@ -85,7 +85,7 @@
 	<ThoughtDef>
 		<defName>ABF_ArtificialBeings_Horrible_Social</defName>
 		<thoughtClass>Thought_SituationalSocial</thoughtClass>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
 		<stages>
 			<li>
 				<label>distrust for artificials</label>
@@ -132,7 +132,7 @@
 	<ThoughtDef>
 		<defName>ABF_ArtificialBeings_Respected_Social</defName>
 		<thoughtClass>Thought_SituationalSocial</thoughtClass>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
 		<stages>
 			<li>
 				<label>respect for artificials</label>
@@ -169,7 +169,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_ArtificialBeings_Exalted</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialBeings</workerClass>
 		<thoughtClass>Thought_Situational</thoughtClass>
 		<stages>
 			<li>
@@ -183,7 +183,7 @@
 	<ThoughtDef>
 		<defName>ABF_ArtificialBeings_Exalted_Social</defName>
 		<thoughtClass>Thought_SituationalSocial</thoughtClass>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
 		<stages>
 			<li>
 				<label>amazing artificial life forms!</label>

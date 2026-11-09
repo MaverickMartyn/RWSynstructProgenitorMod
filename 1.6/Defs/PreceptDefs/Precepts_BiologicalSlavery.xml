@@ -70,7 +70,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Biological_Slavery_Abhorrent_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>biological slaves in colony</label>
@@ -176,7 +176,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Biological_Slavery_Horrible_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>biological slaves in colony</label>
@@ -323,7 +323,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Biological_Slavery_Disapproved_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>biological slaves in colony</label>
@@ -499,7 +499,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Biological_Slavery_Honorable_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>biological slaves in colony</label>
@@ -511,7 +511,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Biological_Slavery_Honorable_NoSlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavery_NoSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_BiologicalSlavery_NoSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>no biological slaves in colony</label>

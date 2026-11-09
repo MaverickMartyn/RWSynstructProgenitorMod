@@ -17,13 +17,13 @@ namespace SynstructProgenitorMod
         {
             Lord lord = p.GetLord();
             if (lord != null)
-                if (lord.ownedPawns.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && c.IsSlave))
+                if (lord.ownedPawns.Any(c => SynstructProgenitorMod.IsArtificial(c) && c.IsSlave))
                     return true;
 
             Caravan car = p.GetCaravan();
             if (car != null)
             {
-                if (car.PawnsListForReading.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && c.IsSlave))
+                if (car.PawnsListForReading.Any(c => SynstructProgenitorMod.IsArtificial(c) && c.IsSlave))
                     return true;
             }
 
@@ -33,10 +33,10 @@ namespace SynstructProgenitorMod
                 Faction fac = p.Faction;
                 if (fac != null)
                 {
-                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && c.IsSlave))
+                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorMod.IsArtificial(c) && c.IsSlave))
                         return true;
                 }
-                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && !p.HostileTo(c) && c.IsSlave))
+                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorMod.IsArtificial(c) && !p.HostileTo(c) && c.IsSlave))
                 {
                     return true;
                 }
@@ -52,13 +52,13 @@ namespace SynstructProgenitorMod
         {
             Lord lord = p.GetLord();
             if (lord != null)
-                if (!lord.ownedPawns.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && c.IsSlave))
+                if (!lord.ownedPawns.Any(c => SynstructProgenitorMod.IsArtificial(c) && c.IsSlave))
                     return true;
 
             Caravan car = p.GetCaravan();
             if (car != null)
             {
-                if (!car.PawnsListForReading.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && c.IsSlave))
+                if (!car.PawnsListForReading.Any(c => SynstructProgenitorMod.IsArtificial(c) && c.IsSlave))
                     return true;
             }
 
@@ -68,10 +68,10 @@ namespace SynstructProgenitorMod
                 Faction fac = p.Faction;
                 if (fac != null)
                 {
-                    if (!map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && c.IsSlave))
+                    if (!map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorMod.IsArtificial(c) && c.IsSlave))
                         return true;
                 }
-                else if (!map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && !p.HostileTo(c) && c.IsSlave))
+                else if (!map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorMod.IsArtificial(c) && !p.HostileTo(c) && c.IsSlave))
                 {
                     return true;
                 }
@@ -87,13 +87,13 @@ namespace SynstructProgenitorMod
         {
             Lord lord = p.GetLord();
             if (lord != null)
-                if (lord.ownedPawns.Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && c.IsSlave))
+                if (lord.ownedPawns.Any(c => SynstructProgenitorMod.IsBiological(c) && c.IsSlave))
                     return true;
 
             Caravan car = p.GetCaravan();
             if (car != null)
             {
-                if (car.PawnsListForReading.Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && c.IsSlave))
+                if (car.PawnsListForReading.Any(c => SynstructProgenitorMod.IsBiological(c) && c.IsSlave))
                     return true;
             }
 
@@ -103,10 +103,10 @@ namespace SynstructProgenitorMod
                 Faction fac = p.Faction;
                 if (fac != null)
                 {
-                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && c.IsSlave))
+                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorMod.IsBiological(c) && c.IsSlave))
                         return true;
                 }
-                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && !p.HostileTo(c) && c.IsSlave))
+                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorMod.IsBiological(c) && !p.HostileTo(c) && c.IsSlave))
                 {
                     return true;
                 }
@@ -122,13 +122,13 @@ namespace SynstructProgenitorMod
         {
             Lord lord = p.GetLord();
             if (lord != null)
-                if (!lord.ownedPawns.Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && c.IsSlave))
+                if (!lord.ownedPawns.Any(c => SynstructProgenitorMod.IsBiological(c) && c.IsSlave))
                     return true;
 
             Caravan car = p.GetCaravan();
             if (car != null)
             {
-                if (!car.PawnsListForReading.Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && c.IsSlave))
+                if (!car.PawnsListForReading.Any(c => SynstructProgenitorMod.IsBiological(c) && c.IsSlave))
                     return true;
             }
 
@@ -138,10 +138,10 @@ namespace SynstructProgenitorMod
                 Faction fac = p.Faction;
                 if (fac != null)
                 {
-                    if (!map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && c.IsSlave))
+                    if (!map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorMod.IsBiological(c) && c.IsSlave))
                         return true;
                 }
-                else if (!map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && !p.HostileTo(c) && c.IsSlave))
+                else if (!map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorMod.IsBiological(c) && !p.HostileTo(c) && c.IsSlave))
                 {
                     return true;
                 }

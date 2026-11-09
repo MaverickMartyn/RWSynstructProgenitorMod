@@ -17,13 +17,13 @@ namespace SynstructProgenitorMod
         {
             Lord lord = p.GetLord();
             if (lord != null)
-                if (lord.ownedPawns.Any(c => SynstructProgenitorScenarioMod.IsBiological(c)))
+                if (lord.ownedPawns.Any(c => SynstructProgenitorMod.IsBiological(c)))
                     return true;
 
             Caravan car = p.GetCaravan();
             if (car != null)
             {
-                if (car.PawnsListForReading.Any(c => SynstructProgenitorScenarioMod.IsBiological(c)))
+                if (car.PawnsListForReading.Any(c => SynstructProgenitorMod.IsBiological(c)))
                     return true;
             }
 
@@ -33,10 +33,10 @@ namespace SynstructProgenitorMod
                 Faction fac = p.Faction;
                 if (fac != null)
                 {
-                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorScenarioMod.IsBiological(c)))
+                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorMod.IsBiological(c)))
                         return true;
                 }
-                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorScenarioMod.IsBiological(c) && !p.HostileTo(c)))
+                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorMod.IsBiological(c) && !p.HostileTo(c)))
                 {
                     return true;
                 }
@@ -49,7 +49,7 @@ namespace SynstructProgenitorMod
     public class ThoughtWorker_Precept_BiologicalBeings_Social : ThoughtWorker_Precept_Social
     {
         protected override ThoughtState ShouldHaveThought(Pawn p, Pawn otherPawn) =>
-            SynstructProgenitorScenarioMod.IsBiological(otherPawn);
+            SynstructProgenitorMod.IsBiological(otherPawn);
     }
 
     public class ThoughtWorker_Precept_ArtificialBeings : ThoughtWorker_Precept
@@ -58,13 +58,13 @@ namespace SynstructProgenitorMod
         {
             Lord lord = p.GetLord();
             if (lord != null)
-                if (lord.ownedPawns.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c)))
+                if (lord.ownedPawns.Any(c => SynstructProgenitorMod.IsArtificial(c)))
                     return true;
 
             Caravan car = p.GetCaravan();
             if (car != null)
             {
-                if (car.PawnsListForReading.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c)))
+                if (car.PawnsListForReading.Any(c => SynstructProgenitorMod.IsArtificial(c)))
                     return true;
             }
 
@@ -74,10 +74,10 @@ namespace SynstructProgenitorMod
                 Faction fac = p.Faction;
                 if (fac != null)
                 {
-                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorScenarioMod.IsArtificial(c)))
+                    if (map.mapPawns.SpawnedPawnsInFaction(fac).Any(c => SynstructProgenitorMod.IsArtificial(c)))
                         return true;
                 }
-                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorScenarioMod.IsArtificial(c) && !p.HostileTo(c)))
+                else if (map.mapPawns.AllPawnsSpawned.Any(c => SynstructProgenitorMod.IsArtificial(c) && !p.HostileTo(c)))
                 {
                     return true;
                 }
@@ -90,6 +90,6 @@ namespace SynstructProgenitorMod
     public class ThoughtWorker_Precept_ArtificialBeings_Social : ThoughtWorker_Precept_Social
     {
         protected override ThoughtState ShouldHaveThought(Pawn p, Pawn otherPawn) =>
-            SynstructProgenitorScenarioMod.IsArtificial(otherPawn);
+            SynstructProgenitorMod.IsArtificial(otherPawn);
     }
 }

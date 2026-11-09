@@ -51,7 +51,7 @@
     <Compile Include="SynstructProgenitorHarmony.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="SlaveryThoughts.cs" />
-    <Compile Include="SynstructProgenitorScenarioMod.cs" />
+    <Compile Include="SynstructProgenitorMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BeingsThoughts.cs" />
   </ItemGroup>

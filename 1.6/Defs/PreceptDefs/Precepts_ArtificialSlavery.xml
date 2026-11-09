@@ -70,7 +70,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Artificial_Slavery_Abhorrent_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>artificial slaves in colony</label>
@@ -177,7 +177,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Artificial_Slavery_Horrible_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>artificial slaves in colony</label>
@@ -324,7 +324,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Artificial_Slavery_Disapproved_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>artificial slaves in colony</label>
@@ -500,7 +500,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Artificial_Slavery_Honorable_SlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>artificial slaves in colony</label>
@@ -512,7 +512,7 @@
 
 	<ThoughtDef>
 		<defName>ABF_Artificial_Slavery_Honorable_NoSlavesInColony</defName>
-		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialSlavery_NoSlavesInColony</workerClass>
+		<workerClass>SynstructProgenitorMod.ThoughtWorker_Precept_ArtificialSlavery_NoSlavesInColony</workerClass>
 		<stages>
 			<li>
 				<label>no artificial slaves in colony</label>
