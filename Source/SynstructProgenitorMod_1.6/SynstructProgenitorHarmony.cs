@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using Verse;
 
-namespace SynstructProgenitorScenario
+namespace SynstructProgenitorMod
 {
     public class SynstructProgenitorHarmony
     {

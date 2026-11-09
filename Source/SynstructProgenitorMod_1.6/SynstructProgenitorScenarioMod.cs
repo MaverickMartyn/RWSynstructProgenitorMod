@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI.Group;
 
-namespace SynstructProgenitorScenario
+namespace SynstructProgenitorMod
 {
     public class SynstructProgenitorScenarioMod : Mod
     {

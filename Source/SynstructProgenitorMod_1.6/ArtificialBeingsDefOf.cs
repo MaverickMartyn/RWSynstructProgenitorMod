@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace SynstructProgenitorScenario
+namespace SynstructProgenitorMod
 {
     [DefOf]
     public static class ArtificialBeingsDefOf

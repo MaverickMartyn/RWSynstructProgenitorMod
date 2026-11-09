@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI.Group;
 
-namespace SynstructProgenitorScenario
+namespace SynstructProgenitorMod
 {
     public class ThoughtWorker_Precept_ArtificialSlavesInColony : ThoughtWorker_Precept
     {

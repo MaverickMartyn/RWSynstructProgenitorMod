@@ -14,7 +14,7 @@ using Verse;
 using Verse.AI;
 using Verse.Grammar;
 
-namespace SynstructProgenitorScenario
+namespace SynstructProgenitorMod
 {
     /// <summary>
     /// "More useful than the Harmony wiki" ~ Mehni
