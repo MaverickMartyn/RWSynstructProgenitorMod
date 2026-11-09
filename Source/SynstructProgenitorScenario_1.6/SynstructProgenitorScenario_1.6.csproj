@@ -73,6 +73,9 @@
     <None Include="..\..\Textures\**\*.png">
       <Link>Textures\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </None>
+    <None Include="..\..\**\*.md">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
