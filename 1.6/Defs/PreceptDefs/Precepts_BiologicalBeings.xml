@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Issue -->
+
+	<IssueDef>
+		<defName>ABF_BiologicalBeings</defName>
+		<label>biological beings</label>
+		<iconPath>UI/Issues/BiologicalBeings</iconPath>
+	</IssueDef>
+	
+
+
+	<!-- Precepts -->
+
+	<!-- Abhorrent -->
+
+	<PreceptDef>
+		<defName>ABF_BiologicalBeings_Abhorrent</defName>
+		<issue>ABF_BiologicalBeings</issue>
+		<label>abhorrent</label>
+		<description>Biological beings shouldn’t even think of trying to make friends with our kind. They wish for nothing but our demise and we won’t tolerate being around them.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>      
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_BiologicalBeings_Abhorrent</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_BiologicalBeings_Abhorrent_Social</thought>
+			</li>
+
+
+		</comps>
+	</PreceptDef> 
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalBeings_Abhorrent</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalBeings</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<stages>
+			<li>
+				<label>disgusting flesh-bags!</label>
+				<description>Biological beings are absolutely repulsive and I can’t stand them!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>    
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalBeings_Abhorrent_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>disgusting flesh-bag!</label>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Horrible -->
+
+	<PreceptDef>
+		<defName>ABF_BiologicalBeings_Horrible</defName>
+		<issue>ABF_BiologicalBeings</issue>
+		<label>disliked</label>
+		<description>Biological beings are different from us - too different. We need to be watchful and keep them at arm's length.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>      
+		</associatedMemes>
+		<comps>      
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_BiologicalBeings_Horrible_Social</thought>
+			</li>   
+		</comps>
+	</PreceptDef>  
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalBeings_Horrible_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>distrust for biologicals</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<!-- Standard -->
+
+	<PreceptDef>
+		<defName>ABF_BiologicalBeings_Standard</defName>
+		<issue>ABF_BiologicalBeings</issue>
+		<label>neutral</label>
+		<description>Biological beings are no different from us. Not lesser nor greater.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>30</displayOrderInIssue>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+
+	</PreceptDef>
+
+	<!-- Respected -->
+
+	<PreceptDef>
+		<defName>ABF_BiologicalBeings_Respected</defName>
+		<issue>ABF_BiologicalBeings</issue>
+		<label>respected</label>
+		<description>Biological beings deserve our admiration.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>     
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>      
+		</associatedMemes>
+		<comps>     
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_BiologicalBeings_Respected_Social</thought>
+			</li>   
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalBeings_Respected_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>respect for biologicals</label>
+				<baseOpinionOffset>15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Exalted -->
+	
+	<PreceptDef>
+		<defName>ABF_BiologicalBeings_Exalted</defName>
+		<issue>ABF_BiologicalBeings</issue>
+		<label>exalted</label>
+		<description>Biological beings are incredible, and we’re blessed to serve the role as their cordial hosts.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>      
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_BiologicalBeings_Exalted</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_BiologicalBeings_Exalted_Social</thought>
+			</li>
+
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalBeings_Exalted</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalBeings</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<stages>
+			<li>
+				<label>amazing biologicals!</label>
+				<description>I can’t believe I’m in the company of biological life forms!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalBeings_Exalted_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>amazing biological life forms!</label>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+</Defs>

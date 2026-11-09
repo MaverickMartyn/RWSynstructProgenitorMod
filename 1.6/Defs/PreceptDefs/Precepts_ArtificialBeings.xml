@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Issue -->
+
+	<IssueDef>
+		<defName>ABF_ArtificialBeings</defName>
+		<label>artificial beings</label>
+		<iconPath>UI/Issues/ArtificialBeings</iconPath>
+	</IssueDef>
+
+	<!-- Precepts -->
+
+	<!-- Abhorrent -->
+
+	<PreceptDef>
+		<defName>ABF_ArtificialBeings_Abhorrent</defName>
+		<issue>ABF_ArtificialBeings</issue>
+		<label>abhorrent</label>
+		<description>Artificial beings shouldn’t even think of trying to make friends with our kind. They wish for nothing but our demise and we won’t tolerate being around them.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_ArtificialBeings_Abhorrent</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_ArtificialBeings_Abhorrent_Social</thought>
+			</li>
+		</comps>
+	</PreceptDef> 
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialBeings_Abhorrent</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<stages>
+			<li>
+				<label>disgusting clanker!</label>
+				<description>Artificial beings are absolutely repulsive and I can’t stand them!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>    
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialBeings_Abhorrent_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>disgusting clanker!</label>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Horrible -->
+
+	<PreceptDef>
+		<defName>ABF_ArtificialBeings_Horrible</defName>
+		<issue>ABF_ArtificialBeings</issue>
+		<label>disliked</label>
+		<description>Artificial beings are different from us - too different. We need to be watchful and keep them at arm's length.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+		<comps>      
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_ArtificialBeings_Horrible_Social</thought>
+			</li>   
+		</comps>
+	</PreceptDef>  
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialBeings_Horrible_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>distrust for artificials</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Standard -->
+
+	<PreceptDef>
+		<defName>ABF_ArtificialBeings_Standard</defName>
+		<issue>ABF_ArtificialBeings</issue>
+		<label>neutral</label>
+		<description>Artificial beings are no different from us. Not lesser nor greater.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>30</displayOrderInIssue>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+
+	</PreceptDef>
+
+	<!-- Respected -->
+
+	<PreceptDef>
+		<defName>ABF_ArtificialBeings_Respected</defName>
+		<issue>ABF_ArtificialBeings</issue>
+		<label>respected</label>
+		<description>Artificial beings deserve our admiration.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>     
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>
+		</associatedMemes>
+		<comps>     
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_ArtificialBeings_Respected_Social</thought>
+			</li>   
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialBeings_Respected_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>respect for artificials</label>
+				<baseOpinionOffset>15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Exalted -->
+	
+	<PreceptDef>
+		<defName>ABF_ArtificialBeings_Exalted</defName>
+		<issue>ABF_ArtificialBeings</issue>
+		<label>exalted</label>
+		<description>Artificial beings are incredible, and we’re blessed to serve the role as their cordial hosts.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_ArtificialBeings_Exalted</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_ArtificialBeings_Exalted_Social</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialBeings_Exalted</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings</workerClass>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<stages>
+			<li>
+				<label>amazing artificials!</label>
+				<description>I can’t believe I’m in the company of artificial life forms!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialBeings_Exalted_Social</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_ArtificialBeings_Social</workerClass>
+		<stages>
+			<li>
+				<label>amazing artificial life forms!</label>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

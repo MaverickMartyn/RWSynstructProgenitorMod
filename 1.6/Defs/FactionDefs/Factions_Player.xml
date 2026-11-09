@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>ABF_Faction_Synstruct_Player_Progenitor</defName>
+		<label>Synstruct Progenitor</label>
+		<description>An artificial colony, started by a single synstruct progenitor.</description>
+		<isPlayer>true</isPlayer>
+		<backstoryFilters>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                    <li>ABF_SpawnCategory_Synstruct_Jellyman</li>
+                </categories>
+            </li>
+		</backstoryFilters>
+		<basicMemberKind>ABF_PawnKind_Synstruct_Jellyman_QuestCrash</basicMemberKind>
+		<pawnsPlural>colonists</pawnsPlural>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <allowedCultures><li>Astropolitan</li></allowedCultures>
+		<techLevel>Industrial</techLevel>
+		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+        <startingTechprintsResearchTags>
+            <li>ClassicStart</li>
+            <li>ClassicStartTechprints</li>
+        </startingTechprintsResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+
+</Defs>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AlienRace.RaceSettings>
+        <defName>ABF_Faction_Progenitor_SynstructFactionSettings</defName>
+
+        <pawnKindSettings>
+            <startingColonists>
+                <li>
+                    <pawnKindEntries>
+
+                        <!-- Rare Jellymen -->
+                        <!--<li>
+                            <kindDefs>
+                                <li>JellymanPawnKind</li>
+                            </kindDefs>
+                            <chance>5</chance>
+                        </li>-->
+
+                        <!-- Simpletons -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Simpleton_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>20</chance>
+                        </li>
+
+                        <!-- Commoners -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Commoner_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>100</chance>
+                        </li>
+
+                        <!-- Stoics -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Stoic_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>10</chance>
+                        </li>
+
+                        <!-- Socialites -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Socialite_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>10</chance>
+                        </li>
+
+                    </pawnKindEntries>
+
+                    <factionDefs>
+                        <li>ABF_Faction_Synstruct_Player_Progenitor</li>
+                    </factionDefs>
+                </li>
+            </startingColonists>
+            <alienwandererkinds>
+                <li>
+                    <pawnKindEntries>
+
+                        <!-- Rare Jellymen -->
+                        <!--<li>
+                            <kindDefs>
+                                <li>JellymanPawnKind</li>
+                            </kindDefs>
+                            <chance>5</chance>
+                        </li>-->
+
+                        <!-- Simpletons -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Simpleton_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>20</chance>
+                        </li>
+
+                        <!-- Commoners -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Commoner_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>100</chance>
+                        </li>
+
+                        <!-- Stoics -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Stoic_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>10</chance>
+                        </li>
+
+                        <!-- Socialites -->
+                        <li>
+                            <kindDefs>
+                                <li>ABF_PawnKind_Synstruct_Player_Socialite_Sapient_Base</li>
+                            </kindDefs>
+                            <chance>10</chance>
+                        </li>
+
+                    </pawnKindEntries>
+
+                    <factionDefs>
+                        <li>ABF_Faction_Synstruct_Player_Progenitor</li>
+                    </factionDefs>
+                </li>
+            </alienwandererkinds>
+            <alienslavekinds>
+                <!-- Rare Jellymen -->
+                <!--<li>
+                    <kindDefs>
+                        <li>JellymanPawnKind</li>
+                    </kindDefs>
+                    <chance>5</chance>
+                </li>-->
+
+                <!-- Simpletons -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Simpleton_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>20</chance>
+                </li>
+
+                <!-- Commoners -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Commoner_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>100</chance>
+                </li>
+
+                <!-- Stoics -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Stoic_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>10</chance>
+                </li>
+
+                <!-- Socialites -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Socialite_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>10</chance>
+                </li>
+            </alienslavekinds>
+            <alienrefugeekinds>
+                <!-- Rare Jellymen -->
+                <!--<li>
+                    <kindDefs>
+                        <li>JellymanPawnKind</li>
+                    </kindDefs>
+                    <chance>5</chance>
+                </li>-->
+
+                <!-- Simpletons -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Simpleton_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>20</chance>
+                </li>
+
+                <!-- Commoners -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Commoner_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>100</chance>
+                </li>
+
+                <!-- Stoics -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Stoic_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>10</chance>
+                </li>
+
+                <!-- Socialites -->
+                <li>
+                    <kindDefs>
+                        <li>ABF_PawnKind_Synstruct_Player_Socialite_Sapient_Base</li>
+                    </kindDefs>
+                    <chance>10</chance>
+                </li>
+            </alienrefugeekinds>
+        </pawnKindSettings>
+    </AlienRace.RaceSettings>
+</Defs>

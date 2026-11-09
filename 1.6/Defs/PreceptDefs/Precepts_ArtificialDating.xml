@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Issues -->
+	<IssueDef>
+		<defName>ABF_ArtificialDating</defName>
+		<label>dating artificials</label>
+		<iconPath>UI/Issues/ArtificialDating</iconPath>
+	</IssueDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_ArtificialDating_BeginRomance</defName>
+		<label>begin romance with artificial</label>
+	</HistoryEventDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_ArtificialDating_SharedBed</defName>
+		<label>share bed with artificial</label>
+	</HistoryEventDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_ArtificialDating_Dating</defName>
+		<label>in a relationship with artificial</label>
+	</HistoryEventDef>
+
+	<!-- Forbidden -->
+
+	<PreceptDef>
+		<defName>ABF_ArtificialDating_Prohibited</defName>
+		<issue>ABF_ArtificialDating</issue>
+		<label>forbidden</label>
+		<description>Romancing a clanker is absolutely off the table, and the thought of copulation with one is disgusting.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_UnwillingToDo">
+				<eventDef>ABF_ArtificialDating_BeginRomance</eventDef>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<!-- Horrible -->
+
+	<PreceptDef>
+		<defName>ABF_ArtificialDating_Horrible</defName>
+		<issue>ABF_ArtificialDating</issue>
+		<label>horrible</label>
+		<description>The idea of mating with an artificial being is nothing short of ridiculous and there are plenty of reasons to not even entertain the idea.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_UnwillingToDo">
+				<eventDef>ABF_ArtificialDating_SharedBed</eventDef>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_ArtificialDating_Dating</eventDef>
+				<thought>ABF_ArtificialDating_Horrible</thought>
+				<description>Dating an artificial being</description>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_ArtificialDating_Dating</eventDef>
+				<thought>ABF_ArtificialDating_Know_Horrible</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialDating_Horrible</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>dated an artificial life form</label>
+				<description>How could I bring myself to date a robot? I feel disgusted with myself.</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_ArtificialDating_Know_Horrible</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>5</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>dated an artificial life form</label>
+				<baseOpinionOffset>-30</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Acceptable -->
+	
+	<PreceptDef>
+		<defName>ABF_ArtificialDating_Acceptable</defName>
+		<issue>ABF_ArtificialDating</issue>
+		<label>acceptable</label>
+		<description>If an artificial being and oneself mesh well why would romance be out of the question?</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+		
+		
+	</PreceptDef>
+	
+	<!-- Preferred -->
+	
+	<PreceptDef>
+		<defName>ABF_ArtificialDating_Preferred</defName>
+		<issue>ABF_ArtificialDating</issue>
+		<label>preferred</label>
+		<description>Romance with machines can be an exciting change of pace and should be encouraged.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>
+		</associatedMemes>
+	</PreceptDef>
+	
+	<!-- Honorable -->
+	
+	<PreceptDef>
+		<defName>ABF_ArtificialDating_Honorable</defName>
+		<issue>ABF_ArtificialDating</issue>
+		<label>honorable</label>
+		<description>To take an artificial being's hand in love and dedication is both exhilarating and exotic and those who choose to do so should be respected for their open-mindedness.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_ArtificialDating_Dating</eventDef>
+				<thought>ABF_ArtificialDating_Know_Honorable</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+	
+	<ThoughtDef>
+		<defName>ABF_ArtificialDating_Know_Honorable</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>5</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>dated an artificial life form</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

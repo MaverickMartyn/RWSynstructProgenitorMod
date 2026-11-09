@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Issues -->
+	<IssueDef>
+		<defName>ABF_BiologicalDating</defName>
+		<label>dating biologicals</label>
+		<iconPath>UI/Issues/BiologicalDating</iconPath>
+	</IssueDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_BiologicalDating_BeginRomance</defName>
+		<label>begin romance with biological</label>
+	</HistoryEventDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_BiologicalDating_SharedBed</defName>
+		<label>share bed with biological</label>
+	</HistoryEventDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_BiologicalDating_Dating</defName>
+		<label>in a relationship with biological being</label>
+	</HistoryEventDef>
+
+	<!-- Forbidden -->
+
+	<PreceptDef>
+		<defName>ABF_BiologicalDating_Prohibited</defName>
+		<issue>ABF_BiologicalDating</issue>
+		<label>forbidden</label>
+		<description>Romancing biological life forms is absolutely off the table, and the thought of copulation with a flesh-bag is disgusting.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>60</displayOrderInIssue>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_UnwillingToDo">
+				<eventDef>ABF_BiologicalDating_BeginRomance</eventDef>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<!-- Horrible -->
+
+	<PreceptDef>
+		<defName>ABF_BiologicalDating_Horrible</defName>
+		<issue>ABF_BiologicalDating</issue>
+		<label>horrible</label>
+		<description>The idea of mating with an alien is nothing short of ridiculous and there are plenty of reasons to not even entertain the idea.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>50</displayOrderInIssue>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_UnwillingToDo">
+				<eventDef>ABF_BiologicalDating_SharedBed</eventDef>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_BiologicalDating_Dating</eventDef>
+				<thought>ABF_BiologicalDating_Horrible</thought>
+				<description>Dating an alien</description>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_BiologicalDating_Dating</eventDef>
+				<thought>ABF_BiologicalDating_Know_Horrible</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalDating_Horrible</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>dated a biological</label>
+				<description>How could I bring myself to date a flesh bag? I feel disgusted with myself.</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_BiologicalDating_Know_Horrible</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>5</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>dated a biological</label>
+				<baseOpinionOffset>-30</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Acceptable -->
+	
+	<PreceptDef>
+		<defName>ABF_BiologicalDating_Acceptable</defName>
+		<issue>ABF_BiologicalDating</issue>
+		<label>acceptable</label>
+		<description>If a biological creature and oneself mesh well, why would romance be out of the question?</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+	</PreceptDef>
+	
+	<!-- Preferred -->
+	
+	<PreceptDef>
+		<defName>ABF_BiologicalDating_Preferred</defName>
+		<issue>ABF_BiologicalDating</issue>
+		<label>preferred</label>
+		<description>Romance with biological beings can be an exciting change of pace and should be encouraged.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+	</PreceptDef>
+	
+	<!-- Honorable -->
+	
+	<PreceptDef>
+		<defName>ABF_BiologicalDating_Honorable</defName>
+		<issue>ABF_BiologicalDating</issue>
+		<label>honorable</label>
+		<description>To take a biological's hand in love and dedication is both exhilarating and exotic and those who choose to do so should be respected for their open-mindedness.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>    
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_BiologicalDating_Dating</eventDef>
+				<thought>ABF_BiologicalDating_Know_Honorable</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+	
+	<ThoughtDef>
+		<defName>ABF_BiologicalDating_Know_Honorable</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>5</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>dated a biological</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

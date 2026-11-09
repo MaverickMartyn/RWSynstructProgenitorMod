@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Issues -->
+	<IssueDef>
+		<defName>ABF_BiologicalSlavery</defName>
+		<label>biological slavery</label>
+		<iconPath>UI/Issues/BiologicalSlavery</iconPath>
+	</IssueDef>
+
+	<HistoryEventDef>
+		<defName>ABF_Biological_SoldSlave</defName>
+		<label>sold biological</label>
+	</HistoryEventDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_Biological_EnslavedPrisoner</defName>
+		<label>enslaved prisoner</label>
+	</HistoryEventDef>
+	
+	<HistoryEventDef>
+		<defName>ABF_Biological_EnslavedPrisonerNotPreviouslyEnslaved</defName>
+		<label>enslaved prisoner not previously enslaved</label>
+	</HistoryEventDef>
+
+	<!-- Precepts -->
+
+	<!-- Abhorrent -->
+	
+	<PreceptDef>
+		<defName>ABF_BiologicalSlavery_Abhorrent</defName>
+		<issue>ABF_BiologicalSlavery</issue>
+		<label>abhorrent</label>
+		<description>Owning or trading biological creatures is deeply evil.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>40</displayOrderInIssue>
+		<displayOrderInImpact>1000</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_Biological_Slavery_Abhorrent_SlavesInColony</thought>
+				<description>Each biological slave in colony</description>
+			</li>
+			<li Class="PreceptComp_UnwillingToDo">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+			</li>
+			<li Class="PreceptComp_UnwillingToDo">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Abhorrent</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Know_Abhorrent</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Abhorrent_Mood</thought>
+				<description>Someone sold a biological slave</description>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_Slavery_Abhorrent_SlavesInColony</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<stages>
+			<li>
+				<label>biological slaves in colony</label>
+				<description>We're keeping biological creatures as slaves. It's barbaric.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Abhorrent</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>sold biological slave</label>
+				<baseOpinionOffset>-30</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Abhorrent_Mood</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>biological slave sold</label>
+				<description>We sold a living, biological being into slavery. It was an abhorrent, barbaric act.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Know_Abhorrent</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>enslaved biological prisoner</label>
+				<baseOpinionOffset>-30</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Horrible -->
+	
+	<PreceptDef>
+		<defName>ABF_BiologicalSlavery_Horrible</defName>
+		<issue>ABF_BiologicalSlavery</issue>
+		<label>horrible</label>
+		<description>Owning or trading biological beings is a horrible thing.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>30</displayOrderInIssue>
+		<displayOrderInImpact>1000</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_Biological_Slavery_Horrible_SlavesInColony</thought>
+				<description>Each biological slave in colony</description>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Horrible</thought>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Horrible</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Horrible</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Know_Horrible</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Horrible_Mood</thought>
+				<description>Someone sold a biological slave</description>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Know_Horrible_Mood</thought>
+				<description>Someone enslaved a biological prisoner</description>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_Slavery_Horrible_SlavesInColony</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<stages>
+			<li>
+				<label>biological slaves in colony</label>
+				<description>We're keeping biological creatures as slaves. It's wrong.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Horrible</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>sold biological slave</label>
+				<description>I sold a biological being into slavery. I'm not sure I can forgive myself.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Horrible</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>enslaved biological prisoner</label>
+				<description>I forced a biological being into slavery. How can I justify that?</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Horrible</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>sold biological slave</label>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Horrible_Mood</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>biological slave sold</label>
+				<description>We sold a biological being into slavery. What a horrible thing to do.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Know_Horrible</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>enslaved biological prisoner</label>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Know_Horrible_Mood</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>biological prisoner enslaved</label>
+				<description>We enslaved a biological being. What a horrible thing to do to another sapient being.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Disapproved -->
+	
+	<PreceptDef>
+		<defName>ABF_BiologicalSlavery_Disapproved</defName>
+		<issue>ABF_BiologicalSlavery</issue>
+		<label>disapproved</label>
+		<description>Slavery of biological beings is part of life, though it is extremely distasteful. They are inferior after all.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<displayOrderInImpact>1000</displayOrderInImpact>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<conflictingMemes>
+			<li>ArtificialSupremacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>BiologicalSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_Biological_Slavery_Disapproved_SlavesInColony</thought>
+				<description>Each biological slave in colony</description>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Disapproved</thought>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Disapproved</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Disapproved</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Know_Disapproved</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Disapproved_Mood</thought>
+				<description>Someone sold a biological slave</description>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisoner</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Know_Disapproved_Mood</thought>
+				<description>Someone enslaved a biological prisoner</description>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_Slavery_Disapproved_SlavesInColony</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<stages>
+			<li>
+				<label>biological slaves in colony</label>
+				<description>We're keeping biological, living creatures as slaves. Even if it's necessary, it's distasteful and I wish we wouldn't.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Disapproved</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>sold biological slave</label>
+				<description>I sold a biological slave into slavery. I hope nothing terrible happens to them.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Disapproved</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>enslaved biological prisoner</label>
+				<description>I enslaved a biological prisoner. It's hard to justify such actions.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Disapproved</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>sold biological slave</label>
+				<baseOpinionOffset>-10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Disapproved_Mood</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>biological slave sold</label>
+				<description>We sold a biological being into slavery. We shouldn't have done that.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Know_Disapproved</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>enslaved biological prisoner</label>
+				<baseOpinionOffset>-10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Know_Disapproved_Mood</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>biological prisoner enslaved</label>
+				<description>We enslaved a biological prisoner. We shouldn't have done that.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Acceptable -->
+
+	<PreceptDef>
+		<defName>ABF_BiologicalSlavery_Acceptable</defName>
+		<issue>ABF_BiologicalSlavery</issue>
+		<label>acceptable</label>
+		<description>Slavery of biological life is a normal, unremarkable part of life.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<approvesOfSlavery>true</approvesOfSlavery>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+			<li>Guilty</li>
+			<li>Individualist</li>
+		</conflictingMemes>
+	</PreceptDef>
+	
+	<!-- Honorable -->
+		
+	<PreceptDef>
+		<defName>ABF_BiologicalSlavery_Honorable</defName>
+		<issue>ABF_BiologicalSlavery</issue>
+		<label>honorable</label>
+		<description>One who owns and trades biological slaves should be honored and respected. Those flesh bags live only to serve us.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+		<displayOrderInImpact>1000</displayOrderInImpact>
+		<conflictingMemes>
+			<li>BiologicalSupremacy</li>
+			<li>Guilty</li>
+			<li>Individualist</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>ArtificialSupremacy</li>
+		</associatedMemes>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_Biological_Slavery_Honorable_SlavesInColony</thought>
+				<description>Each biological slave in colony</description>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>ABF_Biological_Slavery_Honorable_NoSlavesInColony</thought>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Honorable</thought>
+				<onlyForNonSlaves>true</onlyForNonSlaves>
+			</li>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisonerNotPreviouslyEnslaved</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Honorable</thought>
+				<onlyForNonSlaves>true</onlyForNonSlaves>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Honorable</thought>
+				<onlyForNonSlaves>true</onlyForNonSlaves>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisonerNotPreviouslyEnslaved</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Know_Honorable</thought>
+				<onlyForNonSlaves>true</onlyForNonSlaves>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_SoldSlave</eventDef>
+				<thought>ABF_Biological_SoldSlave_Know_Honorable_Mood</thought>
+				<description>Someone sold a biological slave</description>
+				<onlyForNonSlaves>true</onlyForNonSlaves>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>ABF_Biological_EnslavedPrisonerNotPreviouslyEnslaved</eventDef>
+				<thought>ABF_Biological_EnslavedPrisoner_Know_Honorable_Mood</thought>
+				<description>Someone enslaved a biological prisoner</description>
+				<onlyForNonSlaves>true</onlyForNonSlaves>
+			</li>
+		</comps>
+		<approvesOfSlavery>true</approvesOfSlavery>
+	</PreceptDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_Slavery_Honorable_SlavesInColony</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavesInColony</workerClass>
+		<stages>
+			<li>
+				<label>biological slaves in colony</label>
+				<description>We've got biological slaves. It means we're on the right path.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_Slavery_Honorable_NoSlavesInColony</defName>
+		<workerClass>SynstructProgenitorScenario.ThoughtWorker_Precept_BiologicalSlavery_NoSlavesInColony</workerClass>
+		<stages>
+			<li>
+				<label>no biological slaves in colony</label>
+				<description>Without subjugating lesser life forms, nobody will respect us.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Honorable</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>sold biological slave</label>
+				<description>I sold a flesh bag into slavery. It'll make people notice my stature.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Honorable</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>enslaved biological prisoner</label>
+				<description>I took a flesh bag into slavery. With no choice, it had to submit to me.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Honorable</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>25</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>sold biological slave</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_SoldSlave_Know_Honorable_Mood</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>biological slave sold</label>
+				<description>We sold an inferior life form into slavery! A great display of our honor and power.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Know_Honorable</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stackLimit>100</stackLimit>
+		<stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>enslaved biological prisoner</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>ABF_Biological_EnslavedPrisoner_Know_Honorable_Mood</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>biological prisoner enslaved</label>
+				<description>We enslaved an inferior life form. It now serves our whims!</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

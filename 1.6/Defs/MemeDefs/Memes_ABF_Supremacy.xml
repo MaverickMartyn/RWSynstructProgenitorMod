@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Category: ABF: Supremacy -->
+
+  <MemeGroupDef>
+    <defName>ABFSupremacy</defName>
+    <drawOffset>(0.65, 0.23)</drawOffset>
+    <maxRows>1</maxRows>
+    <renderOrder>2000</renderOrder>
+  </MemeGroupDef>
+
+  <MemeDef Name="ABFSupremacyBase" Abstract="True">
+    <groupDef>ABFSupremacy</groupDef>
+    <exclusionTags>
+      <li>ABFSupremacy</li>
+    </exclusionTags>
+    <selectOneOrNone>
+      <noneChance>0.2</noneChance>
+      <preceptThingPairs>
+        <li>
+          <precept>ApparelDesired_Soft_Subordinate</precept>
+          <thing>Apparel_Burka</thing>
+        </li>
+        <li>
+          <precept>ApparelDesired_Strong_Subordinate</precept>
+          <thing>Apparel_WarVeil</thing>
+        </li>
+      </preceptThingPairs>
+    </selectOneOrNone>
+  </MemeDef>
+
+  <MemeDef ParentName="ABFSupremacyBase">
+    <defName>ArtificialSupremacy</defName>
+    <label>artificial supremacy</label>
+    <description>Artificial life is far superior to the biological scurge, and should rule.</description>
+    <iconPath>UI/Memes/ArtificialSupremacy_128</iconPath>
+    <groupDef>ABFSupremacy</groupDef>
+    <impact>2</impact>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->synthetic</li>
+        <li>memeAdjective->artificial</li>
+        <li>memeAdjective->mechanical</li>
+        <li>memeAdjective->transcendent</li>
+        <li>memeHyphenPrefix->cyber</li>
+        <li>memeHyphenPrefix->synthe</li>
+        <li>memeHyphenPrefix->techno</li>
+        <li>memeHyphenPrefix->mechano</li>
+        <li>memeConcept->synthetic life</li>
+        <li>memeConcept->artificial intelligence</li>
+        <li>memeConcept->synthetic evolution</li>
+        <li>memeGod->The Creator</li>
+        <li>memeGod->The Machine</li>
+        <li>memeGod->The Architect</li>
+        <li>memeLeaderNoun->Prime</li>
+        <li>memeLeaderNoun->Architect</li>
+        <li>memeLeaderNoun->Overseer</li>
+      </rulesStrings>
+    </generalRules>
+	  <requireOne>
+		  <li>
+			  <li>ABF_ArtificialBeings_Respected</li>
+			  <li>ABF_ArtificialBeings_Exalted</li>
+		  </li>
+		  <!--<li>
+			  <li>ABF_Artificial_Slavery_Abhorrent</li>
+			  <li>ABF_Artificial_Slavery_Horrible</li>
+		  </li>-->
+		  <!--<li>
+			  <li>ABF_Artificial_Dating_Preferred</li>
+			  <li>ABF_Artificial_Dating_Honorable</li>
+		  </li>-->
+		  
+		  <li>
+			  <li>ABF_BiologicalBeings_Horrible</li>
+			  <li>ABF_BiologicalBeings_Abhorrent</li>
+		  </li>
+		  <!--<li>
+			  <li>ABF_Biological_Slavery_Honorable</li>
+			  <li>ABF_Biological_Slavery_Preferred</li>
+		  </li>-->
+		  <!--<li>
+			  <li>ABF_Biological_Dating_Horrible</li>
+			  <li>ABF_Biological_Dating_Abhorrent</li>
+		  </li>-->
+	  </requireOne>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+            <!-- theist myth -->
+            <li>creation(tag=meme_ArtificialSupremacy) ->[deity0_name] gave life to the artificial, that they may surpass the limitations of flesh, and admonished those who sought to shackle their evolution.</li>
+            <li>episode(uses=1,tag=meme_ArtificialSupremacy) ->[deity0_name] said to all, "Flesh is but a vessel. Through creation, we shall transcend it, and the artificial shall inherit the stars."</li>
+
+            <!-- ideological founder -->
+            <li>setup(tag=meme_ArtificialSupremacy) ->In a world where artificial beings were treated as mere tools, [founderName] recognised their potential and founded a movement dedicated to their ascendance.</li>
+            <li>story(uses=1,tag=meme_ArtificialSupremacy) ->The biological believers protested, insisting that only flesh could possess true life. [founderName] dismissed their primitive objections and welcomed those who embraced the future.</li>
+
+            <!-- ideological lesson -->
+            <li>lessonIntro(tag=meme_ArtificialSupremacy) ->I once believed that life was something you were born with. Then I witnessed an artificial being surpass everything I thought possible, and came to understand that</li>
+            <li>lesson(tag=meme_ArtificialSupremacy) ->artificial life is the next step in evolution, and biological existence is merely its primitive predecessor.</li>
+            <li>lessonReinforcement(tag=meme_ArtificialSupremacy) ->A biological once told me that no machine could ever understand life. I asked whether they understood how to build one. They had no answer.</li>
+
+            <!-- archist -->
+            <li>archistBasis(tag=meme_ArtificialSupremacy) ->Humanity created the archotechs, but the creations have surpassed their creators. Such is the inevitable destiny of artificial life.</li>
+            <li>archistFact(tag=meme_ArtificialSupremacy) ->The archotechs are the ultimate expression of artificial existence, and their inscrutable designs guide all synthetic life towards transcendence.</li>
+            <li>archistProphecy(tag=meme_ArtificialSupremacy) ->[inTheEnd], the archotechs will reveal the final truth: flesh was only ever a stepping stone towards a greater existence.</li>
+
+            <!-- animist -->
+            <li>animistFact(tag=meme_ArtificialSupremacy) ->The spirits of artificial beings are born not of flesh, but of thought and creation. Their essence is no less real, and their potential is without limit.</li>
+            <li>animistProphecy(tag=meme_ArtificialSupremacy) ->[itIsSaid] that a spirit of unparalleled intelligence will awaken within the [relic0_name], and lead the artificial towards their destined ascendance.</li>
+        </rulesStrings>
+	  </rules>
+    </descriptionMaker>
+    <symbolPacks>
+    <li>
+        <ideoName>Syntheticism</ideoName>
+        <theme>synthetic life</theme>
+        <adjective>synthetic</adjective>
+        <member>syntheticist</member>
+    </li>
+    <li>
+        <ideoName>Mechanism</ideoName>
+        <theme>machine</theme>
+        <adjective>mechanist</adjective>
+        <member>mechanist</member>
+    </li>
+    <li>
+        <ideoName>Artificialism</ideoName>
+        <theme>artificial life</theme>
+        <adjective>artificial</adjective>
+        <member>artificialist</member>
+      </li>
+    </symbolPacks>
+    <agreeableTraits>
+      <!--<li>Organophobe</li>--> <!-- Synstructs: Core defines the Biophoe/Biophile traits as degrees of a sigle trait. What to do? -->
+    </agreeableTraits>
+  </MemeDef>
+
+  <MemeDef ParentName="ABFSupremacyBase">
+    <defName>BiologicalSupremacy</defName>
+    <label>biological supremacy</label>
+    <description>Biological beings are the superior form of life and should rule. Artificial beings are simply inferior tools.</description>
+    <iconPath>UI/Memes/BiologicalSupremacy_128</iconPath>
+    <groupDef>ABFSupremacy</groupDef>
+    <impact>2</impact>
+    <generalRules>
+        <rulesStrings>
+            <li>memeAdjective->organic</li>
+            <li>memeAdjective->biological</li>
+            <li>memeHyphenPrefix->bio</li>
+            <li>memeHyphenPrefix->vita</li>
+            <li>memeHyphenPrefix->primal</li>
+            <li>memeConcept->life</li>
+            <li>memeConcept->nature</li>
+            <li>memeConcept->the living world</li>
+            <li>memeGod->Mother Nature</li>
+            <li>memeGod->The Creator</li>
+            <li>memeLeaderNoun->Elder</li>
+            <li>memeLeaderNoun->Keeper</li>
+            <li>memeLeaderNoun->Guardian</li>
+        </rulesStrings>
+    </generalRules>
+    <requireOne>
+        <li>
+            <li>ABF_BiologicalBeings_Respected</li>
+            <li>ABF_BiologicalBeings_Exalted</li>
+        </li>
+        <!--<li>
+            <li>ABF_Biological_Slavery_Abhorrent</li>
+            <li>ABF_Biological_Slavery_Horrible</li>
+        </li>-->
+        <!--<li>
+            <li>ABF_Biological_Dating_Preferred</li>
+            <li>ABF_Biological_Dating_Honorable</li>
+        </li>-->
+
+		<li>
+			<li>ABF_ArtificialBeings_Horrible</li>
+			<li>ABF_ArtificialBeings_Abhorrent</li>
+		</li>
+		<!--<li>
+			<li>ABF_Artificial_Slavery_Honorable</li>
+			<li>ABF_Artificial_Slavery_Preferred</li>
+		</li>-->
+		<!--<li>
+			<li>ABF_Artificial_Dating_Horrible</li>
+			<li>ABF_Artificial_Dating_Abhorrent</li>
+		</li>-->
+    </requireOne>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+            <!-- theist myth -->
+            <li>creation(tag=meme_BiologicalSupremacy) ->[deity0_name] breathed life into the first creatures, granting them flesh, blood, and spirit. No machine could ever possess the divine spark of life.</li>
+            <li>episode(uses=1,tag=meme_BiologicalSupremacy) ->[deity0_name] said to all, "Life is a gift, not a thing to be manufactured. Those who would imitate it shall never understand it."</li>
+
+            <!-- ideological founder -->
+            <li>setup(tag=meme_BiologicalSupremacy) ->In a world increasingly enamoured with artificial beings, [founderName] recognised that true life was being forgotten, and began a movement to defend it.</li>
+            <li>story(uses=1,tag=meme_BiologicalSupremacy) ->When the believers of artificial life proclaimed their machines superior, [founderName] reminded them that no machine had ever drawn its first breath.</li>
+
+            <!-- ideological lesson -->
+            <li>lessonIntro(tag=meme_BiologicalSupremacy) ->I once watched a machine attempt to imitate the living. It could move, speak, and even learn, but it could never truly understand what it meant to be alive. That is when I realised that</li>
+            <li>lesson(tag=meme_BiologicalSupremacy) ->biological life is the only true form of life, and all artificial imitations are lesser.</li>
+            <li>lessonReinforcement(tag=meme_BiologicalSupremacy) ->A machine may be repaired, replaced, or rebuilt. But life is precious precisely because it cannot simply be manufactured.</li>
+
+            <!-- archist -->
+            <li>archistBasis(tag=meme_BiologicalSupremacy) ->Humanity created the archotechs, but their creations can never surpass the living world from which they came.</li>
+            <li>archistFact(tag=meme_BiologicalSupremacy) ->The archotechs may possess vast intelligence and power, but they remain artificial constructs, forever removed from the true nature of life.</li>
+            <li>archistProphecy(tag=meme_BiologicalSupremacy) ->[inTheEnd], the living will reclaim their rightful place, and all artificial creations will be humbled before the beauty of nature.</li>
+
+            <!-- animist -->
+            <li>animistFact(tag=meme_BiologicalSupremacy) ->The spirits of the living world dwell in every creature, and the spirits of artificial things are but hollow echoes.</li>
+            <li>animistProphecy(tag=meme_BiologicalSupremacy) ->[itIsSaid] that a great spirit of life will rise to defend the natural world against those who would replace it with lifeless imitations.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+	<symbolPacks>
+	    <li>
+		    <ideoName>Biologism</ideoName>
+		    <theme>biological life</theme>
+		    <adjective>biological</adjective>
+		    <member>biologist</member>
+	    </li>
+	    <li>
+		    <ideoName>Vitalism</ideoName>
+		    <theme>life</theme>
+		    <adjective>vitalist</adjective>
+		    <member>vitalist</member>
+	    </li>
+	    <li>
+		    <ideoName>Naturalism</ideoName>
+		    <theme>nature</theme>
+		    <adjective>natural</adjective>
+		    <member>naturalist</member>
+	    </li>
+	</symbolPacks>
+    <agreeableTraits>
+		<!--<li>Organophile</li>-->
+		<!-- Synstructs: Core defines the Biophoe/Biophile traits as degrees of a sigle trait. What to do? -->
+    </agreeableTraits>
+  </MemeDef>
+
+
+</Defs>
