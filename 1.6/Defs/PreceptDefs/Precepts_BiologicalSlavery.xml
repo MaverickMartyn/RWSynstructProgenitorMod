@@ -9,17 +9,17 @@
 
 	<HistoryEventDef>
 		<defName>ABF_Biological_SoldSlave</defName>
-		<label>sold biological</label>
+		<label>sold biological slave</label>
 	</HistoryEventDef>
 	
 	<HistoryEventDef>
 		<defName>ABF_Biological_EnslavedPrisoner</defName>
-		<label>enslaved prisoner</label>
+		<label>enslaved biological prisoner</label>
 	</HistoryEventDef>
 	
 	<HistoryEventDef>
 		<defName>ABF_Biological_EnslavedPrisonerNotPreviouslyEnslaved</defName>
-		<label>enslaved prisoner not previously enslaved</label>
+		<label>enslaved biological prisoner not previously enslaved</label>
 	</HistoryEventDef>
 
 	<!-- Precepts -->
@@ -35,9 +35,6 @@
 		<displayOrderInIssue>40</displayOrderInIssue>
 		<displayOrderInImpact>1000</displayOrderInImpact>
 		<defaultSelectionWeight>1</defaultSelectionWeight>
-		<conflictingMemes>
-			<li>ArtificialSupremacy</li>
-		</conflictingMemes>
 		<associatedMemes>
 			<li>BiologicalSupremacy</li>
 		</associatedMemes>
@@ -134,9 +131,6 @@
 		<displayOrderInIssue>30</displayOrderInIssue>
 		<displayOrderInImpact>1000</displayOrderInImpact>
 		<defaultSelectionWeight>1</defaultSelectionWeight>
-		<conflictingMemes>
-			<li>ArtificialSupremacy</li>
-		</conflictingMemes>
 		<associatedMemes>
 			<li>BiologicalSupremacy</li>
 		</associatedMemes>
@@ -281,9 +275,6 @@
 		<displayOrderInIssue>20</displayOrderInIssue>
 		<displayOrderInImpact>1000</displayOrderInImpact>
 		<defaultSelectionWeight>1</defaultSelectionWeight>
-		<conflictingMemes>
-			<li>ArtificialSupremacy</li>
-		</conflictingMemes>
 		<associatedMemes>
 			<li>BiologicalSupremacy</li>
 		</associatedMemes>

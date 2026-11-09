@@ -63,27 +63,27 @@
 			  <li>ABF_ArtificialBeings_Respected</li>
 			  <li>ABF_ArtificialBeings_Exalted</li>
 		  </li>
-		  <!--<li>
-			  <li>ABF_Artificial_Slavery_Abhorrent</li>
-			  <li>ABF_Artificial_Slavery_Horrible</li>
-		  </li>-->
-		  <!--<li>
-			  <li>ABF_Artificial_Dating_Preferred</li>
-			  <li>ABF_Artificial_Dating_Honorable</li>
-		  </li>-->
+		  <li>
+			  <li>ABF_ArtificialSlavery_Abhorrent</li>
+			  <li>ABF_ArtificialSlavery_Horrible</li>
+		  </li>
+		  <li>
+			  <li>ABF_ArtificialDating_Preferred</li>
+			  <li>ABF_ArtificialDating_Honorable</li>
+		  </li>
 		  
 		  <li>
 			  <li>ABF_BiologicalBeings_Horrible</li>
 			  <li>ABF_BiologicalBeings_Abhorrent</li>
 		  </li>
-		  <!--<li>
-			  <li>ABF_Biological_Slavery_Honorable</li>
-			  <li>ABF_Biological_Slavery_Preferred</li>
-		  </li>-->
-		  <!--<li>
-			  <li>ABF_Biological_Dating_Horrible</li>
-			  <li>ABF_Biological_Dating_Abhorrent</li>
-		  </li>-->
+		  <li>
+			  <li>ABF_BiologicalSlavery_Honorable</li>
+			  <li>ABF_BiologicalSlavery_Acceptable</li>
+		  </li>
+		  <li>
+			  <li>ABF_BiologicalDating_Prohibited</li>
+			  <li>ABF_BiologicalDating_Horrible</li>
+		  </li>
 	  </requireOne>
     <descriptionMaker>
       <rules>
@@ -166,27 +166,27 @@
             <li>ABF_BiologicalBeings_Respected</li>
             <li>ABF_BiologicalBeings_Exalted</li>
         </li>
-        <!--<li>
-            <li>ABF_Biological_Slavery_Abhorrent</li>
-            <li>ABF_Biological_Slavery_Horrible</li>
-        </li>-->
-        <!--<li>
-            <li>ABF_Biological_Dating_Preferred</li>
-            <li>ABF_Biological_Dating_Honorable</li>
-        </li>-->
+        <li>
+            <li>ABF_BiologicalSlavery_Abhorrent</li>
+            <li>ABF_BiologicalSlavery_Horrible</li>
+        </li>
+        <li>
+            <li>ABF_BiologicalDating_Preferred</li>
+            <li>ABF_BiologicalDating_Honorable</li>
+        </li>
 
 		<li>
 			<li>ABF_ArtificialBeings_Horrible</li>
 			<li>ABF_ArtificialBeings_Abhorrent</li>
 		</li>
-		<!--<li>
-			<li>ABF_Artificial_Slavery_Honorable</li>
-			<li>ABF_Artificial_Slavery_Preferred</li>
-		</li>-->
-		<!--<li>
-			<li>ABF_Artificial_Dating_Horrible</li>
-			<li>ABF_Artificial_Dating_Abhorrent</li>
-		</li>-->
+		<li>
+			<li>ABF_ArtificialSlavery_Honorable</li>
+			<li>ABF_ArtificialSlavery_Acceptable</li>
+		</li>
+		<li>
+			<li>ABF_ArtificialDating_Horrible</li>
+			<li>ABF_ArtificialDating_Prohibited</li>
+		</li>
     </requireOne>
     <descriptionMaker>
       <rules>
