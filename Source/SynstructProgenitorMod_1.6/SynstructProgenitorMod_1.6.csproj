@@ -7,8 +7,8 @@
     <ProjectGuid>{8F25FDA0-6223-4044-9079-7B7EEF4BAAF8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SynstructProgenitorScenario</RootNamespace>
-    <AssemblyName>SynstructProgenitorScenario</AssemblyName>
+    <RootNamespace>SynstructProgenitorMod</RootNamespace>
+    <AssemblyName>SynstructProgenitorMod</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
