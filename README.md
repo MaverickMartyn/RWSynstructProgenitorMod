@@ -1,10 +1,11 @@
 # Synstruct Progenitor Mod
 
-An addon for the Synstruct mod series for Rimworld. 
+An addon for the Synstruct mod series for Rimworld.  
+Find it on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3837195798)
 
 ## Features
 * Synstruct Progenitor Scenario
-	* Start as a single, but powerful, Jellyman synstruct, and build your colonists yourself.
+	* Start as a single synstruct (even a powerful Jellyman), and build your colonists yourself.
 * Ideology integration
 	* The scenario is designed to work with the Ideology DLC, providing new memes and precepts.  
 	Embrace or reject synthetic life, or een biological life, and shape your colony's beliefs accordingly.
