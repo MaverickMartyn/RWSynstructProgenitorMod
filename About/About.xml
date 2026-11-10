@@ -6,8 +6,8 @@
     <supportedVersions>
 		<li>1.6</li>
     </supportedVersions>
-	<!--<steamAppId></steamAppId>-->
-	<url>https://github.com/MaverickMartyn/RWSynstructProgenitorMod</url>
+	<steamAppId>3837195798</steamAppId>
+	<url>https://steamcommunity.com/sharedfiles/filedetails/?id=3837195798</url>
     <modDependencies>
 		<li>
 			<packageId>erdelf.HumanoidAlienRaces</packageId>
